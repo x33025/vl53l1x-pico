@@ -7,7 +7,7 @@ A translation of Pololu's [VL53L1X Arduino Library](https://github.com/pololu/vl
 ### Method 1: Copy to Project
 
 1. Download the library directory.
-2. Place it in your project's lib folder.
+2. Place it in your project's `lib` folder.
 3. Add to your `CMakeLists.txt`:
 
 ```cmake
@@ -17,8 +17,11 @@ target_link_libraries(your_target VL53L1X)
 
 ### Method 2: Git Submodule
 
+To add this library as a Git submodule, run:
+
 ```bash
-git submodule add https://github.com/x33025/vl53l1x-pico.git VL53L1X
+git submodule add https://github.com/x33025/vl53l1x-pico.git lib/vl53l1x-pico
+git submodule update --init --recursive
 ```
 
 In your `CMakeLists.txt`:
@@ -26,6 +29,19 @@ In your `CMakeLists.txt`:
 ```cmake
 add_subdirectory(lib/vl53l1x-pico)
 target_link_libraries(your_target VL53L1X)
+```
+
+#### Cloning with Submodules
+If you are cloning a project that includes this as a submodule, use:
+
+```bash
+git clone --recurse-submodules https://github.com/yourproject/repository.git
+```
+
+To update submodules:
+
+```bash
+git submodule update --remote --merge
 ```
 
 ## CMake Configuration
