@@ -3,7 +3,7 @@
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 
-#include "VL53L1X.h" // your translated header
+#include "VL53L1X.h"
 
 // Constructors ////////////////////////////////////////////////////////////////
 
@@ -17,7 +17,7 @@ VL53L1X::VL53L1X(i2c_inst_t *i2c_port, uint8_t i2c_address, uint16_t io_timeout_
   , saved_vhv_timeout(0)
   , distance_mode(Unknown)
 {
-  // Nothing else needed here unless you want to auto-init the sensor
+  
 }
 
 // Public Methods //////////////////////////////////////////////////////////////
