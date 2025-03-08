@@ -8,7 +8,6 @@ class VL53L1X
 {
   public:
 
-    // register addresses from API vl53l1x_register_map.h
     enum regAddr : uint16_t
     {
       SOFT_RESET                                                                 = 0x0000,
@@ -1321,7 +1320,6 @@ bool timeoutOccurred();
 
 
     // The Arduino two-wire interface used a 7-bit number for the address
-    // etc. We'll keep the default address if you still need it:
     static const uint8_t AddressDefault = 0b0101001;
 
     // value used in measurement timing budget calculations
